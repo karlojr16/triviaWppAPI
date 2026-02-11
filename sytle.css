@@ -28,6 +28,29 @@ h1 {
     color: rgb(59, 130, 246);
     text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
 }
+
+.opciones-diseno {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+.opciones-diseno button {
+    padding: 15px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(51, 65, 85, 0.8);
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+.opciones-diseno button:hover {
+    background: rgb(59, 130, 246); 
+    transform: translateY(-2px);
+    box-shadow: 0px 5px 15px rgba(59, 130, 246, 0.4);
+}
 .oculto{
     display: none;
 }
