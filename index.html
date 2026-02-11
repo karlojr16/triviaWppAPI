@@ -4,10 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRIVIA</title>
+    <link rel="stylesheet" href="sytle.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    <p>hola</p>
-    <p>prueba2</p>
+    <div class="Principal">
+        <h1>Trivia Master</h1>
+        <div id="contenedor-juego">
+            <div id="contador">Pregunta 1 de 5</div>
+            <div id="contenedor-opciones" class="opciones-diseno"></div>
+        </div>
+        <div id="pantalla-resultado" class="oculto">
+            <h2>Juego Terminado</h2>
+            <p id="puntaje-final">Puntaje: 0/5</p>
+            <button id="wtsapp-btn">Compartir en Whatsapp</button>
+            <button onclick="">Jugar de Nuevo</button>
+        </div>
+    </div>
     
 </body>
 </html>
