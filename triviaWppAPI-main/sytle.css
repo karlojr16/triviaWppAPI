@@ -1,0 +1,119 @@
+body{
+    background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), 
+    url("https://www.tuexpertoapps.com/wp-content/uploads/2017/10/question-mark-2405205_640-600x399.jpg");
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: rgb(248,250,252);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Adaptado de .Principal → ahora coincide con tu HTML (.container) */
+.container {
+    background: rgba(30, 41, 59, 0.95);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    width: 500px;
+    min-height: 520px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+h1 {
+    font-size: 2.3rem;
+    margin-bottom: 1.5rem;
+    color: rgb(59, 130, 246);
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+h2{
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* Botones generales */
+button{
+    padding: 10px 15px;
+    margin: 8px 5px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+/* Botón empezar */
+#startBtn{
+    background-color: rgb(59, 130, 246);
+    color: white;
+}
+
+#startBtn:hover{
+    background-color: rgb(37, 99, 235);
+    transform: scale(1.05);
+}
+
+/* Botones respuestas */
+.answer-btn{
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    background-color: rgb(51, 65, 85);
+    color: white;
+}
+
+.answer-btn:hover{
+    background-color: rgb(71, 85, 105);
+    transform: translateY(-2px);
+}
+
+/* Correcto */
+.answer-btn.correct{
+    background-color: rgb(34,197,94);
+}
+
+/* Incorrecto */
+.answer-btn.incorrect{
+    background-color: rgb(239,68,68);
+}
+
+/* Botón siguiente */
+#nextBtn{
+    background-color: rgb(168,85,247);
+    color: white;
+}
+
+#nextBtn:hover{
+    background-color: rgb(147,51,234);
+}
+
+/* Botón reiniciar */
+#restartBtn{
+    background-color: rgb(251,191,36);
+    color: black;
+}
+
+#restartBtn:hover{
+    background-color: rgb(245,158,11);
+}
+
+/* Puntaje */
+#score{
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+/* Adaptación de .oculto → ahora coincide con JS */
+.hidden{
+    display: none;
+}
