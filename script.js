@@ -60,7 +60,9 @@ function respuestaI(pos, tarjetaO, preguntaA){
         }
 }
     
-
+function reiniciarPagina() {
+    location.reload();
+}
 
 
 
