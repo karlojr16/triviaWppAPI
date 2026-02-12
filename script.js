@@ -1,5 +1,6 @@
 
 var datos = {};
+var i = 0;
 
 function extraer(){
     fetch ("https://opentdb.com/api.php?amount=20&category=15&type=multiple" )
@@ -8,26 +9,37 @@ function extraer(){
 }
 
 function Mostrar(){
-    var tarjeta = document.getElementById("texto-pregunta");
-    var cajaOpciones = document.getElementById("contenedor-opciones");
+        
+        let correcta = false;
+        var tarjeta = document.getElementById("texto-pregunta");
+        var cajaOpciones = document.getElementById("contenedor-opciones");
+        
 
-    cajaOpciones.innerHTML = "";
+        cajaOpciones.innerHTML = "";
 
-    var preguntaActual = datos.results[0]
+        var preguntaActual = datos.results[i]
 
-    tarjeta.innerHTML = preguntaActual.question;
+        tarjeta.innerHTML = preguntaActual.question;
 
-    var btnCorrecto = document.createElement("button");
-    btnCorrecto.innerHTML = preguntaActual.correct_answer;
-    cajaOpciones.appendChild(btnCorrecto);
+        var btnCorrecto = document.createElement("button");
+        btnCorrecto.innerHTML = preguntaActual.correct_answer;
+        cajaOpciones.appendChild(btnCorrecto);
+        btnCorrecto.addEventListener("click", function(event){
+            correcta = true;
+            if(correcta){
+            i++
+            Mostrar();
+        }
+        });
+        respuestaI(i, cajaOpciones, preguntaActual);
 
-    respuestaI(0, cajaOpciones);
+
 }
-function respuestaI(pos, tarjeta){
-    for(let i = 0; i < 3; i++){
-            var respuestaI = document.createElement("button");
-            respuestaI.innerHTML = datos.results[pos].incorrect_answers[i]
-            tarjeta.appendChild(respuestaI);
+function respuestaI(pos, tarjetaO, preguntaA){
+    for(let x = 0; x < 3; x++){
+            var rIncorrecta = document.createElement("button");
+            rIncorrecta.innerHTML = preguntaA.incorrect_answers[x]
+            tarjetaO.appendChild(rIncorrecta);
         }
 }
     
